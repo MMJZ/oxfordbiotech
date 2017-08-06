@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+  <meta name="description" content="For Oxford BioTech society">
+  <meta name="keywords" content="oxford,biotech,society,university,student">
+  <meta name="author" content="Michael Agius">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUBT</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.1/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.5.1/svg.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favs/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favs/favicon-16x16.png">
+  <link rel="manifest" href="/favs/manifest.json">
+  <link rel="mask-icon" href="/favs/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <header>
+    <cable-holder>
+      <logo-box>
+        <logo-cable></logo-cable>
+        <logo-strand>
+          <img src="img/strandc.png">
+          <h1>OUBT</h1>
+        </logo-strand>
+        <logo-cable></logo-cable>
+      </logo-box>
+      <events-box>
+        <h2>Next Event</h2>
+        <div>
+          <h3>Speaker: Andrew McLean</h3>
+          <h4>19<sup>th</sup> October, 17:00</h4>
+          <h5>Main Seminar Room, New Biochemistry</h5>
+        </div>
+      </events-box>
+    </cable-holder>
+  </header>
+
+
+  <main>
+
+    <cable-holder>
+
+      <two-col>
+        <section>
+          <h2>About Us</h2>
+          <p>Founded in 2017, the Oxford University Biotech Society is a student organisation that aims to inspire a new generation of biotech entrepreneurs by bringing leading scientists, investors, and innovators to the students of Oxford.</p>
+        </section>
+        <section>
+          <h2>Join Us</h2>
+<!--          <p>The society prides itself on having one of the lowest membership fees in Oxford. Membership is £5 for life.</p>
+-->
+          <p>We will soon have a mailing list and members list up and running. Watch this space!</p>
+<!--          <a class="button" href="join">Become a member</a>-->
+<!--          <a class="button" href="mailinglist">Join the mailing list</a>-->
+        </section>
+      </two-col>
+      
+
+      <section id="committee">
+        <h2>People</h2>
+        <ul>
+          <li>
+            <img src="img/com/thomas.jpg">
+            <div>
+              <h3>President</h3>
+              <p>Thomas Vanderstichele</p>
+              <a class="email" href="#">president@oxfordbiotech.uk</a>
+            </div>
+            <col-spacer></col-spacer>
+          </li>
+          <li>
+            <img src="img/com/jei.jpg">
+            <div>
+              <h3>Secretary</h3>
+              <p>Jei Diwakar</p>
+              <a class="email" href="#">secretary@oxfordbiotech.uk</a>
+            </div>
+            <col-spacer></col-spacer>
+          </li>
+          <li>
+            <img src="img/com/noah.jpg">
+            <div>
+              <h3>Treasurer and Sponsorship Officer</h3>
+              <p>Noah Sprent</p>
+              <a class="email" href="#">treasurer@oxfordbiotech.uk</a>
+            </div>
+            <col-spacer></col-spacer>
+          </li>
+          <li>
+            <img src="img/com/neb.jpg">
+            <div>
+              <h3>Outreach Officer</h3>
+              <p>Nebojša Jovanović</p>
+              <a class="email" href="#">outreach@oxfordbiotech.uk</a>
+            </div>
+            <col-spacer></col-spacer>
+          </li>
+          <li>
+            <img src="img/com/mick.jpg">
+            <div>
+              <h3>IT Officer</h3>
+              <p>Michael Agius</p>
+              <a class="email" href="#">mikey@oxfordbiotech.uk</a>
+            </div>
+            <col-spacer></col-spacer>
+          </li>
+        </ul>
+      </section>
+
+      <two-col>
+        <section>
+          <h2>Sponsors</h2>
+          <p>We are always accepting of new sponsors for the society.</p>
+          <a class="button" href="sponsors">Find out more</a>
+        </section>
+        <section>
+          <h2>Contact Us</h2>
+          <p>We welcome contact from industry, academia, future sponsors, and fellow student societies. Please email us at <a class="email" href="#">info@oxfordbiotech.uk</a>.</p>
+        </section>
+      </two-col>
+    </cable-holder>
+  </main>
+
+  <footer-spacer></footer-spacer>
+
+  <footer>
+    <cable-holder>
+      OUBT 2017
+    </cable-holder>
+  </footer>
+  
+  <script>
+    for(let x of Array.from(document.getElementsByClassName("email"))){
+      x.href = "mailto:" + x.innerHTML;
+    }
+  </script>
+</body>
+
+</html>
