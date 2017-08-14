@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
   <meta name="description" content="For Oxford BioTech society">
   <meta name="keywords" content="oxford,biotech,society,university,student">
   <meta name="author" content="Michael Agius">
@@ -48,21 +48,54 @@
 
     <cable-holder>
 
-      <two-col>
-        <section>
-          <h2>About Us</h2>
-          <p>Founded in 2017, the Oxford University Biotech Society is a student organisation that aims to inspire a new generation of biotech entrepreneurs by bringing leading scientists, investors, and innovators to the students of Oxford.</p>
-        </section>
-        <section>
-          <h2>Join Us</h2>
-<!--          <p>The society prides itself on having one of the lowest membership fees in Oxford. Membership is £5 for life.</p>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Founded in 2017, the Oxford University Biotech Society is a student organisation that aims to inspire a new generation of biotech entrepreneurs by bringing leading scientists, investors, and innovators to the students of Oxford.</p>
+      </section>
+      <section id="join">
+        <h2>Join Us</h2>
+        <!--          <p>The society prides itself on having one of the lowest membership fees in Oxford. Membership is £5 for life.</p>
 -->
-          <p>We will soon have a mailing list and members list up and running. Watch this space!</p>
-<!--          <a class="button" href="join">Become a member</a>-->
-<!--          <a class="button" href="mailinglist">Join the mailing list</a>-->
-        </section>
-      </two-col>
-      
+        <p>We will soon have a mailing list and members list up and running. Watch this space!</p>
+        <!--          <a class="button" href="join">Become a member</a>-->
+        <!--          <a class="button" href="mailinglist">Join the mailing list</a>-->
+      </section>
+
+
+      <section id="events">
+        <h2>Events</h2>
+        <ul>
+          <li>
+            <h3>Thursday 19<sup>th</sup> October</h3>
+            <h4>Main Seminar Room, New Biochemistry Building</h4>
+            <p>Andrew McLean, Principal at Oxford Sciences Innovation</p>
+          </li>
+          
+          <li>
+            <h3>Saturday 28<sup>th</sup> October</h3>
+            <h4>Exam Schools</h4>
+            <p>Science, Engineering and Technology Fair</p>
+          </li>
+          
+          <li>
+            <h3>Thursday 2<sup>nd</sup> November</h3>
+            <h4>Main Seminar Room, New Biochemistry Building</h4>
+            <p>Hagan Bayley, Cofounder Oxford Nanopore Technologies</p>
+          </li>
+          
+          <li id="notconfirmed">
+            <h3>Thursday 9<sup>th</sup> November</h3>
+            <h4>Location TBC</h4>
+            <p>Mina Bekheet, Cofounder and President Panacea Innovation</p>
+          </li>
+          
+          <li>
+            <h3>Thursday 30<sup>th</sup> November</h3>
+            <h4>Main Seminar Room, New Biochemistry Building</h4>
+            <p>Matthew Wood, Founder Evox Therapeutics</p>
+          </li>
+        </ul>
+      </section>
 
       <section id="committee">
         <h2>People</h2>
@@ -115,17 +148,15 @@
         </ul>
       </section>
 
-      <two-col>
-        <section>
-          <h2>Sponsors</h2>
-          <p>We're currently looking for sponsors for the next academic year.</p>
-          <a class="button" href="sponsors">Find out more</a>
-        </section>
-        <section>
-          <h2>Contact Us</h2>
-          <p>We welcome contact from industry, academia, future sponsors, and fellow student societies. Please email us at <a class="email" href="#">info@oxfordbiotech.uk</a>.</p>
-        </section>
-      </two-col>
+      <section id="sponsors">
+        <h2>Sponsors</h2>
+        <p>We're currently looking for sponsors for the next academic year.</p>
+        <a class="button" href="sponsors">Find out more</a>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We welcome contact from industry, academia, future sponsors, and fellow student societies. Please email us at <a class="email" href="#">info@oxfordbiotech.uk</a>.</p>
+      </section>
     </cable-holder>
   </main>
 
@@ -136,9 +167,9 @@
       OUBT 2017
     </cable-holder>
   </footer>
-  
+
   <script>
-    for(let x of Array.from(document.getElementsByClassName("email"))){
+    for (let x of Array.from(document.getElementsByClassName("email"))) {
       x.href = "mailto:" + x.innerHTML;
     }
   </script>
