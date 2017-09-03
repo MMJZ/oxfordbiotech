@@ -174,9 +174,11 @@ input:hover {
 /* header */
 
 header {
-  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent, transparent, rgba(0,0,0,0.5)), url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);
-  background-size: cover;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+/*  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent, transparent, rgba(0,0,0,0.5)), url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);*/
+  background: rgb(0,33,71);
+/*  background-image: url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);*/
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 header>cable-holder {
@@ -353,7 +355,7 @@ section {
 }
 
 section>img {
-  height: 50px;
+  height: 45px;
   display: block;
   margin: 10px auto;
 }
