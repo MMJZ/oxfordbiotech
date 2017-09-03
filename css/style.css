@@ -173,7 +173,11 @@ input:hover {
 
 /* header */
 
-header {}
+header {
+  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent, transparent, rgba(0,0,0,0.5)), url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);
+  background-size: cover;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
 
 header>cable-holder {
   display: -webkit-box;
@@ -189,6 +193,7 @@ header>cable-holder {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  
 }
 
 logo-box {
@@ -199,6 +204,8 @@ logo-box {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  
+  min-height: 100vh;
 }
 
 logo-strand {
@@ -262,6 +269,7 @@ events-box {
   font-size: 1.3em;
   padding-right: 40px;
   display: block;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 events-box>h2 {
@@ -341,6 +349,13 @@ section {
   font-size: 1.1em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+  text-align: center;
+}
+
+section>img {
+  height: 50px;
+  display: block;
+  margin: 10px auto;
 }
 
 section:nth-child(odd) {
@@ -356,7 +371,6 @@ section h2 {
   font-size: 1.9em;
   display: inline-block;
   letter-spacing: 0.02em;
-  padding: 5px 0;
   color: rgb(74, 145, 220);
 }
 
@@ -364,17 +378,13 @@ section>p {
   line-height: 1.35em;
 }
 
-
 section ul {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
 }
 
 .fullgrid section ul {
-  -webkit-column-count: 1;
-  -moz-column-count: 1;
-  column-count: 1;
 }
 
 section li {
@@ -387,7 +397,7 @@ section li {
 @media only screen and (max-width: 700px) {
   main>cable-holder {
     padding: 70px 5px;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-gap: 4px;
   }
   #events,
@@ -401,23 +411,25 @@ section li {
     padding: 10px;
     margin: 5px 2px 5px 5px;
   }
-  section ul {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-  }
+}
+
+#events {
+  background: rgb(158, 206, 235);
+/*  border-top: 5px solid rgb(0,33,71);*/
 }
 
 #events h2 {
   margin-bottom: 20px;
+  color: white;
 }
 
 
 #events li {
   padding: 10px 15px;
-  margin-bottom: 15px;
   border-radius: 5px;
-  background: rgba(158, 206, 235, 0.2);
+/*  background: rgba(158, 206, 235, 0.2);*/
+  background: rgba(255,255,255,0.6);
+/*  background: rgba(0,0,0,0.1);*/
 }
 
 #events h3 {
@@ -437,10 +449,10 @@ section li {
 }
 
 #events p {
-  
+  font-weight: 500;
   font-size: 1.2em;
 /*  font-weight: 500;*/
-  color: rgb(68, 104, 125);
+/*  color: rgb(68, 104, 125);*/
 }
 
 
@@ -462,6 +474,10 @@ dd {
   padding-left: 20px;
 }
 
+#committee {
+  text-align: left;
+}
+
 #committee>h2 {
   margin-bottom: 10px;
 }
@@ -478,12 +494,6 @@ col-spacer {
   margin-right: 10px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#committee li:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 @media only screen and (max-width: 900px) {
