@@ -38,7 +38,8 @@ body {
 }
 
 .posterpage cable-holder {
-  max-width: 90%;
+  max-width: 95%;
+  margin-right: 0;
 }
 
 h2,
