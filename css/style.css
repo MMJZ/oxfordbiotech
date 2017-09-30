@@ -9,7 +9,9 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 100%;
-  background: white;
+  /* subtle patterns */
+  background-image: url(../img/white_wall_hash_@2X.png);
+  background-size: 500px;
   font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,8 +198,7 @@ header {
 /*  background-image: url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);*/
   background-repeat: no-repeat;
   
-  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.3);
-          box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.6);
 }
 
 header>cable-holder {
@@ -301,8 +302,8 @@ events-box {
   font-size: 1.3em;
   padding-right: 30px;
   display: block;
-  align-self: flex-end;
-  padding-bottom: 50px;
+  align-self: center;
+/*  padding-bottom: 50px;*/
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -388,7 +389,8 @@ section {
   -ms-flex: 1;
   flex: 1;
   background: white;
-  padding: 10px 15px 30px 15px;
+/*  padding: 10px 15px 30px 15px;*/
+  padding: 15px 10px;
   /*  margin: 20px;*/
   border-radius: 2px;
   -webkit-box-sizing: border-box;
@@ -396,13 +398,15 @@ section {
   font-size: 1.1em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-  text-align: center;
+/*  text-align: center;*/
 }
 
 section>img {
-  height: 45px;
-  display: block;
-  margin: 10px auto;
+  height: 1.6em;
+  display: inline-block;
+  margin-right: 10px;
+  opacity: 0.8;
+/*  margin: 10px auto;*/
 }
 
 section:nth-child(odd) {
@@ -417,12 +421,14 @@ section h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.9em;
   display: inline-block;
+/*  margin-bottom: 10px;*/
   letter-spacing: 0.02em;
   color: rgb(74, 145, 220);
 }
 
 section>p {
   line-height: 1.35em;
+  clear: both;
 }
 
 section ul {
