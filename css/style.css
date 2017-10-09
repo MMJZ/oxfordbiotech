@@ -437,6 +437,10 @@ section ul {
   grid-gap: 5px;
 }
 
+.onecollist {
+  display: block;
+}
+
 .posterpage section ul {
   display: block;
 }
