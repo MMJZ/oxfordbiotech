@@ -193,11 +193,7 @@ input:hover {
 /* header */
 
 header {
-/*  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent, transparent, rgba(0,0,0,0.5)), url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);*/
   background: rgb(0,33,71);
-/*  background-image: url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/b_biochemistryext.jpg?itok=evtDin-h);*/
-  background-repeat: no-repeat;
-  
   box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.6);
 }
 
@@ -218,8 +214,59 @@ header>cable-holder {
   
 }
 
+.fullheader {
+/*  background: linear-gradient(to right, rgba(0,0,0,0.0), transparent, transparent, rgba(0,0,0,0.0)), url("/img/biochem.jpg");*/
+  background-image: url("/img/backs/biochemfull.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 0 0 10px black;
+}
+
+@media only screen and (max-width:2880px) and (max-height: 1920px) {
+  .fullheader {
+    background-image: url(/img/backs/biochem2880.jpg);
+  }
+}
+
+@media only screen and (max-width: 1920px) and (max-height: 1280px) {
+  .fullheader {
+    background-image: url(/img/backs/biochem1920.jpg);
+  }
+}
+
+@media only screen and (max-width:1440px) and (max-height: 960px) {
+  .fullheader {
+    background-image: url(/img/backs/biochem1440.jpg);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+  @media only screen and (max-width: 1440px) and (max-height: 960px) {
+    .fullheader {
+      background-image: url(/img/backs/biochem2880.jpg);
+    }
+  }
+  @media only screen and (max-width: 960px) and (max-height: 640px) {
+    .fullheader {
+      background-image: url(/img/backs/biochem1920.jpg);
+    }
+  }
+  @media only screen and (max-width:720px) and (max-height: 480px) {
+    .fullheader {
+      background-image: url(/img/backs/biochem1440.jpg);
+    }
+  }
+}
+
+
+
+
+
+
+
 .fullheader logo-box {
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 logo-box {
@@ -265,6 +312,11 @@ logo-cable {
   min-height: 20px;
 }
 
+#biochemcredit {
+  padding: 10px;
+  font-size: 0.9em;
+}
+
 .posterpage logo-strand>h1 {
   font-size: 3em;
 }
@@ -295,6 +347,15 @@ logo-strand>h1>a {
 
 logo-strand>h1>a:hover {
   border-bottom-color: white;
+}
+
+.fullheader events-box {
+  background: rgba(0,0,0,0.6);
+/*  background: rgba(0, 33, 71, 0.9);*/
+  border-radius: 2px;
+/*  box-shadow: 0 2px 5px rgba(0,0,0,0.3);*/
+  padding: 25px 30px 25px 40px;
+/*  text-shadow: 0 0 10px black;*/
 }
 
 events-box {
@@ -334,6 +395,7 @@ events-box>p {
     text-align: left;
     border-left: 3px solid white;
     padding: 20px 5px 20px 10px;
+    background: none !important;
   }
   logo-box {
     display: inline-block;
@@ -344,6 +406,9 @@ events-box>p {
   }
   .fullheader logo-box {
     min-height: 0;
+  }
+  #biochemcredit {
+    border-left: 3px solid white;
   }
 }
 
@@ -447,6 +512,32 @@ section ul {
 
 .posterpage section ul li {
   margin: 10px 0;
+}
+
+.eventpage {
+  text-align: center;
+}
+
+.eventpage .maintitle {
+  display: block;
+  color: rgb(0, 110, 112);
+  margin-top: 50px;
+  font-weight: 500;
+}
+
+.eventpage h3 {
+  margin: 50px 0;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.eventpage img {
+  height: 200px;
+  border: 1px solid white;
+  opacity: 1;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.3);
+/*  transform: rotate(5deg);*/
 }
 
 .fullgrid section ul {
