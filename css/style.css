@@ -126,6 +126,19 @@ th {
   color: inherit;
 }
 
+.inlinelink {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+  color: rgb(72, 145, 220);
+}
+
+.inlinelink:hover {
+  border-bottom: 1px solid rgb(72, 145, 220);
+}
+
 .email {
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
@@ -449,21 +462,34 @@ main>cable-holder {
       align-self: flex-start;
 }
 
-section {
+section,
+img-frame {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+}
+
+section {
   background: white;
 /*  padding: 10px 15px 30px 15px;*/
   padding: 15px 10px;
   /*  margin: 20px;*/
   border-radius: 2px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font-size: 1.1em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
 /*  text-align: center;*/
+}
+
+img-frame {
+  background: rgb(0,33,71);
+  display: block;
+}
+
+img-frame > img {
+  width: 100%;
 }
 
 section>img {
@@ -494,6 +520,7 @@ section h2 {
 section>p {
   line-height: 1.35em;
   clear: both;
+  margin: 5px 0;
 }
 
 section ul {
