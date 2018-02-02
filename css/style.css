@@ -209,7 +209,8 @@ input:hover {
 
 header {
   background: rgb(0,33,71);
-  box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.6);
+          box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.6);
 }
 
 header>cable-holder {
@@ -256,6 +257,7 @@ header>cable-holder {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25),
+(-o-min-device-pixel-ratio: 5/4),
 (min-resolution: 120dpi) {
   @media only screen and (max-width: 1440px) and (max-height: 960px) {
     .fullheader {
@@ -379,7 +381,9 @@ events-box {
   font-size: 1.3em;
   padding-right: 30px;
   display: block;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 /*  padding-bottom: 50px;*/
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -449,8 +453,10 @@ main {
 main>cable-holder {
   border-left: 3px solid rgb(0, 33, 71);
   padding: 70px 20px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-gap: 20px;
 }
@@ -460,6 +466,8 @@ main>cable-holder {
 #opportunities,
 .solosection,
 .fullgrid section{
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / 3;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -480,6 +488,19 @@ section{
   border-radius: 2px;
   font-size: 1.1em;
 /*  text-align: center;*/
+}
+
+section {
+  background-color: #fdfbfb;
+  /*  background-color: red;*/
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+  background-position: 1200px 0;
 }
 
 img-frame {
@@ -524,8 +545,10 @@ section>p {
 }
 
 section ul {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
 }
 
@@ -563,7 +586,8 @@ section ul {
   border: 1px solid white;
   opacity: 1;
   border-radius: 2px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.3);
+          box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.3);
 /*  transform: rotate(5deg);*/
 }
 
@@ -577,8 +601,11 @@ section li {
 }
 
 #events {
-  background: rgb(158, 206, 235);
-/*  border-top: 5px solid rgb(0,33,71);*/
+  background-image: -webkit-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-color: #a1c4fd;
+  border-top: none;
 }
 
 #events h2 {
@@ -590,36 +617,40 @@ section li {
   font-weight: 500;
 }
 
+#events ul { 
+  display: block;
+}
+
 #events li {
   padding: 10px 15px;
   border-radius: 5px;
-/*  background: rgba(158, 206, 235, 0.2);*/
-  background: rgba(255,255,255,0.6);
-/*  background: rgba(0,0,0,0.1);*/
+  margin: 10px 0;
+  border-left: 5px solid rgba(255,255,255,0.8);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.7)), to(rgba(255,255,255,0.4)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0.7), rgba(255,255,255,0.4));
+  background: -o-linear-gradient(left, rgba(255,255,255,0.7), rgba(255,255,255,0.4));
+  background: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.4));
 }
 
 #events h3 {
-/*  font-weight: 500;*/
   font-size: 1.2em;
-/*  color: rgb(0,33,71);*/
 }
 
 
-#notconfirmed {
+.notconfirmed {
   opacity: 0.3;
 }
 
 #events h4 {
   font-size: 1em;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 #events p {
   font-weight: 500;
   font-size: 1.2em;
-/*  font-weight: 500;*/
-/*  color: rgb(68, 104, 125);*/
 }
+
 
 
 @media only screen and (max-width: 700px) {
@@ -636,6 +667,8 @@ section li {
   #committee>ul>li,
   #opportunities>ul>li,
   section{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1 / 3;
   }
 }

@@ -140,14 +140,15 @@ input:hover {
 }
 
 header {
-/*  background: linear-gradient(to right, rgba(0,0,0,0.0), transparent, transparent, rgba(0,0,0,0.0)), url("/img/biochem.jpg");*/
+  /*  background: linear-gradient(to right, rgba(0,0,0,0.0), transparent, transparent, rgba(0,0,0,0.0)), url("/img/biochem.jpg");*/
   background-image: url("/img/backs/biochemfull.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  text-shadow: 0 0 3px rgba(0,0,0,0.5);
-  box-shadow: 0 0 5px rgba(0,0,0,0.6);
-  border-bottom: 1px solid rgba(0,0,0,0.5);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 header>cable-holder {
@@ -164,7 +165,6 @@ header>cable-holder {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  
 }
 
 @media only screen and (max-width:2880px) and (max-height: 1920px) {
@@ -186,6 +186,7 @@ header>cable-holder {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25),
+(-o-min-device-pixel-ratio: 5/4),
 (min-resolution: 120dpi) {
   @media only screen and (max-width: 1440px) and (max-height: 960px) {
     header {
@@ -296,9 +297,11 @@ events-box {
   font-size: 1.3em;
   padding-right: 30px;
   display: block;
-  align-self: center;
-/*  padding-bottom: 50px;*/
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /*  padding-bottom: 50px;*/
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 events-box>h2 {
@@ -363,20 +366,24 @@ main {
 main>cable-holder {
   border-left: 3px solid rgb(0, 33, 71);
   padding: 50px 20px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-gap: 20px;
 }
 
 #events,
 #committee {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / 3;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
-section{
+section {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -384,13 +391,22 @@ section{
   box-sizing: border-box;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-  background: white;
-/*  padding: 10px 15px 30px 15px;*/
   padding: 15px 10px;
-  /*  margin: 20px;*/
   border-radius: 2px;
   font-size: 1.1em;
-/*  text-align: center;*/
+  background-image: -webkit-linear-gradient(330deg, #fdfbfb 0%, #f1f3f3 100%);
+  background-image: -o-linear-gradient(330deg, #fdfbfb 0%, #f1f3f3 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f1f3f3 100%);
+  background-color: #fdfbfb;
+  /*  background-color: red;*/
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+  background-position: 1200px 0;
 }
 
 section>img {
@@ -398,7 +414,7 @@ section>img {
   display: inline-block;
   margin-right: 10px;
   opacity: 0.8;
-/*  margin: 10px auto;*/
+  /*  margin: 10px auto;*/
 }
 
 section:nth-child(odd) {
@@ -413,7 +429,7 @@ section h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.9em;
   display: inline-block;
-/*  margin-bottom: 10px;*/
+  /*  margin-bottom: 10px;*/
   letter-spacing: 0.02em;
   color: rgb(74, 145, 220);
 }
@@ -425,8 +441,10 @@ section>p {
 }
 
 section ul {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
 }
 
@@ -437,7 +455,11 @@ section li {
 }
 
 #events {
-  background: rgb(158, 206, 235);
+  background-image: -webkit-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-color: #a1c4fd;
+  border-top: none;
 }
 
 #events h2 {
@@ -452,7 +474,11 @@ section li {
 #events li {
   padding: 10px 15px;
   border-radius: 5px;
-  background: rgba(255,255,255,0.6);
+  border-left: 5px solid rgba(255, 255, 255, 0.8);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
 }
 
 #events h3 {
@@ -465,7 +491,7 @@ section li {
 
 #events h4 {
   font-size: 1em;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 #events p {
@@ -485,14 +511,15 @@ section li {
   }
   #events>ul>li,
   #committee>ul>li,
-  section{
+  section {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1 / 3;
   }
 }
 
-
 #committee,
-#opportunities{
+#opportunities {
   text-align: left;
 }
 
@@ -526,11 +553,11 @@ col-spacer {
 
 aside {
   display: block;
-  background: rgb(120,120,130);
+  background: rgb(120, 120, 130);
 }
 
 aside>cable-holder {
-  border-left: 3px solid rgb(0,33,71);
+  border-left: 3px solid rgb(0, 33, 71);
   position: relative;
 }
 
@@ -551,8 +578,11 @@ fade-box {
   width: 50px;
   top: 0;
   right: 0;
-  background: linear-gradient(to right, transparent, rgb(120,120,130));
-/*  border: 1px solid red;*/
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgb(120, 120, 130)));
+  background: -webkit-linear-gradient(left, transparent, rgb(120, 120, 130));
+  background: -o-linear-gradient(left, transparent, rgb(120, 120, 130));
+  background: linear-gradient(to right, transparent, rgb(120, 120, 130));
+  /*  border: 1px solid red;*/
 }
 
 aside img {
@@ -564,4 +594,18 @@ aside img {
 footer>cable-holder {
   border-left: 3px solid white;
   padding: 10px 20px;
+/*  font-size: 0.8em;*/
+}
+
+footer .otherside {
+  float: right;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
