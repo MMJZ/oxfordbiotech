@@ -610,3 +610,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+#merckb {
+  height: 0.8em;
+}
