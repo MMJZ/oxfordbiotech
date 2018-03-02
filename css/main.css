@@ -487,7 +487,7 @@ section li {
 
 .notconfirmed {
   opacity: 0.3;
-  display: none;
+/*  display: none;*/
 }
 
 #events h4 {
