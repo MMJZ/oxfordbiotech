@@ -592,8 +592,8 @@ aside img {
 }
 
 footer {
-/*  background: linear-gradient(to right, #0f69af, #0f69af, rgb(0,33,71));*/
-  background: rgb(0,33,71);
+  background: linear-gradient(to right, #0f69af, #0f69af, rgb(0,33,71));
+/*  background: rgb(0,33,71);*/
   color: #96d7d2;
 }
 
