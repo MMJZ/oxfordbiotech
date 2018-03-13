@@ -402,6 +402,7 @@ section {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 section:hover {
@@ -414,6 +415,16 @@ section>img {
   margin-right: 10px;
   opacity: 0.8;
   /*  margin: 10px auto;*/
+}
+
+#merckm {
+  opacity: 1;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 1.8em;
+/*  display: */
+/*  float: left;*/
 }
 
 section:nth-child(odd) {
