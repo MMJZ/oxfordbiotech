@@ -51,8 +51,7 @@ h5 {
   font-weight: 300;
 }
 
-header,
-footer {
+header {
   background: rgb(0, 33, 71);
   color: #eee;
 }

@@ -37,8 +37,7 @@ h5 {
   font-weight: 300;
 }
 
-header,
-footer {
+header {
   background: rgb(0, 33, 71);
   color: #eee;
 }
@@ -592,19 +591,26 @@ aside img {
   margin: 0 -3px;
 }
 
+footer {
+/*  background: linear-gradient(to right, #0f69af, #0f69af, rgb(0,33,71));*/
+  background: rgb(0,33,71);
+  color: #96d7d2;
+}
+
 footer>cable-holder {
-  border-left: 3px solid white;
+  border-left: 3px solid #96d7d2;
   padding: 10px 20px;
 /*  font-size: 0.8em;*/
 }
 
 footer .otherside {
   float: right;
+  color: white;
 }
 
 footer a {
-  color: white;
   text-decoration: none;
+  color: inherit;
 }
 
 footer a:hover {
@@ -613,4 +619,13 @@ footer a:hover {
 
 #merckb {
   height: 0.8em;
+}
+
+@media only screen and (max-width: 800px){
+  footer {
+    background: #0f69af;
+  }
+  footer .otherside {
+    display: none;
+  }
 }
