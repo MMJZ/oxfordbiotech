@@ -12,19 +12,9 @@ body {
   /* subtle patterns */
   background-image: url(../img/white_wall_hash_@2X.png);
   background-size: 500px;
-  font-weight: 300;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -33,7 +23,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+body {
   font-weight: 300;
 }
 
@@ -45,7 +36,7 @@ header {
 cable-holder {
   display: block;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1100px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 95%;
@@ -57,28 +48,8 @@ cable-holder {
   }
 }
 
-.hiddenanchor {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.inlinelink {
-  text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border-bottom: 1px solid transparent;
-  color: rgb(72, 145, 220);
-}
-
-.inlinelink:hover {
-  border-bottom: 1px solid rgb(72, 145, 220);
-}
-
 .email {
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border-bottom: 1px solid transparent;
   color: rgb(72, 145, 220);
@@ -86,36 +57,6 @@ cable-holder {
 
 .email:hover {
   border-bottom: 1px solid rgb(72, 145, 220);
-}
-
-.button {
-  padding: 7px 20px;
-  margin: 15px 15px 5px 0;
-  font-size: 1em;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border-radius: 2px;
-  text-decoration: none;
-  display: inline-block;
-  background: rgba(74, 145, 220, 0.7);
-  color: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.button:hover {
-  background: white;
-  color: rgb(74, 145, 220);
-  border: 1px solid rgba(74, 145, 220, 0.5);
-}
-
-.button:active {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
-  text-decoration: underline;
 }
 
 input {
@@ -139,30 +80,19 @@ input:hover {
 }
 
 header {
-  /*  background: linear-gradient(to right, rgba(0,0,0,0.0), transparent, transparent, rgba(0,0,0,0.0)), url("/img/biochem.jpg");*/
   background-image: url("/img/backs/biochemfull.jpg");
+  background-size: 100%;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.25);
 }
 
 header>cable-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -205,12 +135,7 @@ header>cable-holder {
 }
 
 logo-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 60vh;
 }
@@ -229,20 +154,11 @@ logo-strand {
 
 logo-strand>img {
   height: 240px;
-  float: left;
   margin-left: -26px;
   margin-right: 10px;
 }
 
-logo-strand>.smallimg {
-  border-left: 3px solid white;
-  margin-left: 0;
-  visibility: hidden;
-}
-
 logo-cable {
-  -webkit-box-flex: 2;
-  -ms-flex: 2;
   flex: 2;
   border-left: 3px solid white;
   min-height: 20px;
@@ -253,36 +169,10 @@ logo-cable {
   font-size: 0.9em;
 }
 
-.posterpage logo-strand>h1 {
-  font-size: 3em;
-}
-
 logo-strand>h1 {
   font-size: 4em;
   margin-left: 5px;
-  font-variant: small-caps;
-  font-weight: 300;
   margin-bottom: 25px;
-}
-
-.longtitle {
-  margin-bottom: 0px;
-  line-height: 1.05em;
-}
-
-logo-strand>h1>a {
-  text-decoration: none;
-  color: white;
-  border-bottom: 3px solid transparent;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-logo-strand>h1>a:hover {
-  border-bottom-color: white;
 }
 
 .fullheader events-box {
@@ -297,8 +187,8 @@ events-box {
   padding-right: 30px;
   display: block;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   /*  padding-bottom: 50px;*/
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -368,7 +258,7 @@ main>cable-holder {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-gap: 20px;
 }
@@ -399,8 +289,6 @@ section {
   background-color: #fdfbfb;
   /*  background-color: red;*/
   background-repeat: no-repeat;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
@@ -414,17 +302,43 @@ section>img {
   display: inline-block;
   margin-right: 10px;
   opacity: 0.8;
-  /*  margin: 10px auto;*/
+}
+
+section>a {
+  padding: 7px 20px;
+  margin: 15px 15px 5px 0;
+  font-size: 1em;
+  transition: all 0.2s ease-in-out;
+  border-radius: 2px;
+  text-decoration: none;
+  display: inline-block;
+  background: rgba(74, 145, 220, 0.7);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+section>a:hover {
+  background: white;
+  color: rgb(74, 145, 220);
+  border: 1px solid rgba(74, 145, 220, 0.5);
+}
+
+section>a:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+}
+
+#merckm>a>img {
+  opacity: 1;
+  position: absolute;
+  height: 1.8em;
 }
 
 #merckm {
-  opacity: 1;
+  bottom: 40px;
+  right: 80px;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  height: 1.8em;
-/*  display: */
-/*  float: left;*/
 }
 
 section:nth-child(odd) {
@@ -435,11 +349,10 @@ section:nth-child(even) {
   border-top: 5px solid rgb(0, 110, 112);
 }
 
-section h2 {
+section>h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.9em;
   display: inline-block;
-  /*  margin-bottom: 10px;*/
   letter-spacing: 0.02em;
   color: rgb(74, 145, 220);
 }
@@ -450,11 +363,22 @@ section>p {
   margin: 5px 0;
 }
 
+section>p>a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+  color: rgb(72, 145, 220);
+}
+
+section>p>a:hover {
+  border-bottom: 1px solid rgb(72, 145, 220);
+}
+
 section ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
 }
 
@@ -497,7 +421,7 @@ section li {
 
 .notconfirmed {
   opacity: 0.3;
-/*  display: none;*/
+  /*  display: none;*/
 }
 
 #events h4 {
@@ -538,15 +462,19 @@ section li {
   margin-bottom: 10px;
 }
 
+#committee>h3 {
+  font-size: 1em;
+}
+
 col-spacer {
   display: block;
-  height: 20px;
+  height: 10px;
   clear: both;
 }
 
 #committee li img {
   float: left;
-  width: 90px;
+  width: 80px;
   margin-right: 10px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -578,7 +506,6 @@ img-scroll {
   overflow-y: hidden;
   white-space: nowrap;
   margin: 0;
-  padding: 0;
   padding: 10px 40px 10px 20px;
 }
 
@@ -603,15 +530,13 @@ aside img {
 }
 
 footer {
-  background: linear-gradient(to right, #0f69af, #0f69af, rgb(0,33,71));
-/*  background: rgb(0,33,71);*/
+  background: linear-gradient(to right, #0f69af, #0f69af, rgb(0, 33, 71));
   color: #96d7d2;
 }
 
 footer>cable-holder {
   border-left: 3px solid #96d7d2;
   padding: 10px 20px;
-/*  font-size: 0.8em;*/
 }
 
 footer .otherside {
@@ -632,7 +557,7 @@ footer a:hover {
   height: 0.8em;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
   footer {
     background: #0f69af;
   }
