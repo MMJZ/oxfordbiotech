@@ -727,6 +727,11 @@ col-spacer {
 
 /* footer */
 
+footer {
+  background: rgb(0,33,71);
+  color: white;
+}
+
 footer>cable-holder {
   border-left: 3px solid white;
   padding: 10px 20px;
