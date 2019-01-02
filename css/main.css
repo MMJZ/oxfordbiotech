@@ -455,6 +455,17 @@ section>a:active {
   right: 80px;
   position: absolute;
 }
+#oxfogrant>a>img {
+  opacity: 1;
+  position: absolute;
+  height: 1.8em;
+}
+
+#oxfogrant {
+  bottom: 40px;
+  right: 200px;
+  position: absolute;
+}
 
 section:nth-child(odd) {
   border-top: 5px solid rgb(158, 206, 235);
