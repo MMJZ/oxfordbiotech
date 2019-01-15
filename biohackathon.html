@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+  <meta name="description" content="For Oxford University Biotech society">
+  <meta name="keywords" content="oxford,biotech,society,university,student,oubt">
+  <meta name="author" content="Michael Agius">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUBT</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.1/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.5.1/svg.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favs/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favs/favicon-16x16.png">
+  <link rel="manifest" href="/favs/manifest.json">
+  <link rel="mask-icon" href="/favs/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favs/favicon.ico">
+  <meta name="msapplication-config" content="/favs/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body>
+
+  <header class="fullheader">
+    <cable-holder>
+      <logo-box>
+        <logo-cable>
+<!--          <div id="biochemcredit">Photo by Matthew Lloyd</div>-->
+        </logo-cable>
+        <logo-strand>
+          <img src="img/strandc.png">
+          <h1>OUBT<br>Hackathon</h1>
+        </logo-strand>
+        <logo-cable></logo-cable>
+      </logo-box>
+    </cable-holder>
+  </header>
+
+
+  <main>
+
+    <cable-holder>
+      <section id="countdown-box" class="solosection">
+        <countdown-timer id="countdown-timer">...</countdown-timer>
+      </section>
+      <section id="faqs" class="solosection">
+        <h2>Where do why?</h2>
+        <p>BEcause re</p>
+        
+        <h2>Why do where</h2>
+        <p>Pe</p>
+      </section>
+    </cable-holder>
+  </main>
+<!--
+
+  <footer>
+    <cable-holder>
+      Sponsored by <a href="http://merckgroup.com/"><img id="merckb" src="img/mercks.png"></a>
+      <span class="otherside"><a href="https://www.facebook.com/oxfordbiotech/">Find us on facebook &#x29c9;</a></span>
+    </cable-holder>
+  </footer>
+-->
+
+  <script>
+    
+    const countdownDate = new Date("Mar 1, 2019 18:00:00").getTime();
+    
+    for (let x of Array.from(document.getElementsByClassName("email"))) {
+      x.href = "mailto:" + x.innerHTML;
+    }
+    
+    setInterval(() => {
+      // Get todays date and time
+      const now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      const distance = countdownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("countdown-timer").innerHTML = "<strong>" + days + "</strong>d  <strong>" + hours + "</strong>h  <strong>"
+      + minutes + "</strong>m  <strong>" + seconds + "</strong>s";
+      
+    }, 1000);
+    
+  </script>
+</body>
+
+</html>
