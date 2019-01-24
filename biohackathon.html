@@ -35,7 +35,7 @@
         </logo-cable>
         <logo-strand>
           <img src="img/strandc.png">
-          <h1>OUBT<br>Hackathon</h1>
+          <h1>OUBT<br>Biohackathon</h1>
         </logo-strand>
         <logo-cable></logo-cable>
       </logo-box>
@@ -50,11 +50,56 @@
         <countdown-timer id="countdown-timer">...</countdown-timer>
       </section>
       <section id="faqs" class="solosection">
-        <h2>Where do why?</h2>
-        <p>BEcause re</p>
-        
-        <h2>Why do where</h2>
-        <p>Pe</p>
+        <h2>What is a ‘Biohackathon’?</h2>
+        <p>It will be a weekend of brainstorming and problem-solving to develop a startup pitch for a pressing world problem.
+          This may or may not involve computer programming depending on your idea, but there will not be a wet lab component. 
+          You'll work as a team, thinking about the technology, IP, and financials of your idea, before preparing a pitch for the judges.</p>
+
+        <h2>Who can get involved?</h2>
+        <p>Startup teams work better when they are diverse, and Biotech startups need more than just bioscience expertise to function.
+          So if you’re interested in entrepreneurship, business, IP, finance, and/or solving pressing world problems, we’d love to
+          have you come along! The Biohackathon is only open to affiliates of the University of Oxford.</p>
+
+        <h2>I have no entrepreneurial/bioscience/IP experience, how will I learn what I need?</h2>
+        <p>Diverse teams will have diverse experiences, so if you’re not so sure on one bit, chances are you’ll be able to form a team
+           with someone who is. We will also have a team of expert mentors to provide advice in R&D, IP and business development.
+           Additionally, we’re going to be running some workshops in advance of the biohackathon to get you clued up, and we’ll also
+           highlight all the entrepreneurial workshops going on this term that you can learn from.</p>
+
+        <h2>What’s this year’s theme?</h2>
+        <p>We’ll be announcing this soon, so stay tuned!</p>
+
+        <h2>When is it?</h2>
+        <p>We’ll have our launch evening on the 1st March, with teams working on their ideas on the 2nd/3rd March over the
+          weekend. The top teams will be invited to pitch their ideas to a panel of judges on the evening of Tuesday the 5th March. </p>
+
+        <h2>Where is it?</h2>
+        <p>The Biohackathon will be at the Oxford Foundry, with the final pitching competition in the New Biochemistry Seminar Room.
+          The workshops in the lead-up will also be in the New Biochemistry Seminar Room. </p>
+
+        <h2>Do I sign up as a team or an individual?</h2>
+        <p>Signups will be as individuals, as we want people to go through the whole entrepreneurial process. We’ll have a workshop
+          from Entrepreneur First on the 21st February to teach you a process for finding co-founders, and we’ll give you time to
+          network with other participants to find your team before the biohackathon starts. </p>
+
+        <h2>I have already developed an idea in the field related to the theme of the Biohackathon, can I present it?</h2>
+        <p>The Biohackathon is designed to take you from a problem to a solution, so we think you’ll get more value if you
+          come without a well-developed business plan. If you already have an idea, there are lots of other programmes that
+          are great to help you develop it. The Oxford Foundry is running their ‘All-Innovate’ competition this term, and
+          other organisations such as RebelBio, Imagine IF, and BioStars are all places to help with early-stage
+          companies. You can always get in touch with us if you would like advice. </p>
+
+        <h2>Will food be provided?</h2>
+        <p>Of course! We’ll be providing food during the Biohackathon for attendees.</p>
+
+        <h2>How do you win?</h2>
+        <p>There will be prizes for winning teams, with judging criteria designed to reward teams for exceptional effort
+          in different aspects of Biotech. </p>
+
+        <h2>Have another question?</h2>
+        <p>Send us an email at info@oxfordbiotech.uk, or message us on Facebook. Make sure you’re signed up to our
+          newsletter for updates. </p>
+
       </section>
     </cable-holder>
   </main>
@@ -69,13 +114,13 @@
 -->
 
   <script>
-    
+
     const countdownDate = new Date("Mar 1, 2019 18:00:00").getTime();
-    
+
     for (let x of Array.from(document.getElementsByClassName("email"))) {
       x.href = "mailto:" + x.innerHTML;
     }
-    
+
     setInterval(() => {
       // Get todays date and time
       const now = new Date().getTime();
@@ -92,9 +137,9 @@
       // Display the result in the element with id="demo"
       document.getElementById("countdown-timer").innerHTML = "<strong>" + days + "</strong>d  <strong>" + hours + "</strong>h  <strong>"
       + minutes + "</strong>m  <strong>" + seconds + "</strong>s";
-      
+
     }, 1000);
-    
+
   </script>
 </body>
 
