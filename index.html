@@ -9,7 +9,7 @@
   <meta name="author" content="Michael Agius, Ethan Sung">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OUBT</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css"> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.1/velocity.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.5.1/svg.min.js"></script>
 
@@ -94,20 +94,77 @@
 
 <aside>
   <cable-holder>
-      <fade-box></fade-box>
-      <img-scroll>
-        <img src="img/photos/t1s.jpg">
-        <img src="img/photos/nn4.JPG">
-        <img src="img/photos/bmt1.JPG">
-        <img src="img/photos/oxb1.JPG">
-        <img src="img/photos/ff1.jpg">
-        <img src="img/photos/adapt1.JPG">
-        <img src="img/photos/t2s.jpg">
-        <img src="img/photos/t1a.jpg">
-        <img src="img/photos/t1c.jpg">
-      </img-scroll>
-    </cable-holder>
-  </aside>
+	<fade-box></fade-box>
+			<div class ="mySlides fade">
+				<img src="img/photos/t1s.jpg">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/nn4.JPG">
+			</div>
+			<div class ="mySlides fade">     
+				<img src="img/photos/bmt1.JPG">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/oxb1.JPG">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/ff1.jpg">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/adapt1.JPG">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/t2s.jpg">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/t1a.jpg">
+			</div>
+			<div class ="mySlides fade">
+				<img src="img/photos/t1c.jpg">
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+			<span class="dot" onclick="currentSlide(7)"></span> 
+			<span class="dot" onclick="currentSlide(8)"></span>
+			<span class="dot" onclick="currentSlide(9)"></span>
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
+		</cable-holder>
+	  </aside>
+	  </main>
 
   <main>
     <cable-holder>
