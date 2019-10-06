@@ -54,8 +54,8 @@ cable-holder {
 
 .slideshow-container {
   text-align: center;
-  max-width: 1000px;
-  position: relative;
+  width: auto;
+  position: absolute;
   margin: auto;
 }
 
