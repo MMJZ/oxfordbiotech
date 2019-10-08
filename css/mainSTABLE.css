@@ -731,11 +731,6 @@ aside {
   margin: auto;
 }
 
-aside>cable-holder {
-  border-left: 3px solid rgb(0, 33, 71);
-  margin: auto;
-}
-
 
 fade-box {
   display: block;
