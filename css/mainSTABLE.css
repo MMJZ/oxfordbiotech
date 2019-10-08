@@ -728,6 +728,7 @@ col-spacer {
 
 aside {
   display: block;
+  margin: auto;
 }
 
 aside>cable-holder {
@@ -735,14 +736,6 @@ aside>cable-holder {
   position: relative;
 }
 
-img-scroll {
-  display: block;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  margin: 0;
-  padding: 10px 40px 10px 20px;
-}
 
 fade-box {
   display: block;
@@ -760,10 +753,8 @@ fade-box {
 
 aside img {
   max-height: 350px;
-  margin: 0 -3px;
-	  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;  width: auto;
+  margin: 0 0px;
+  width: auto;
   display: inline-block;
 }
 
