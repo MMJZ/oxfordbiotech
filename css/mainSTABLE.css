@@ -761,6 +761,9 @@ fade-box {
 aside img {
   max-height: 350px;
   margin: 0 -3px;
+	  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;  width: auto;
   display: inline-block;
 }
 
