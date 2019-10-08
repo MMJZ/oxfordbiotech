@@ -733,7 +733,7 @@ aside {
 
 aside>cable-holder {
   border-left: 3px solid rgb(0, 33, 71);
-  position: relative;
+  margin: auto;
 }
 
 
