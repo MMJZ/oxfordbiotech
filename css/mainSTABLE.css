@@ -728,7 +728,6 @@ col-spacer {
 
 aside {
   display: block;
-  background: rgb(120, 120, 130);
 }
 
 aside>cable-holder {
@@ -761,8 +760,8 @@ fade-box {
 
 aside img {
   max-height: 350px;
+	margin: auto;
   display: inline-block;
-  margin: 0 -3px;
 }
 
 footer {
