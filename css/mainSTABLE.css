@@ -1,0 +1,803 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  /* subtle patterns */
+  background-image: url(../img/white_wall_hash_@2X.png);
+  background-size: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  font-weight: 300;
+}
+
+header {
+  background: rgb(0, 33, 71);
+  color: #eee;
+}
+
+cable-holder {
+  display: block;
+  margin: 0 auto;
+  max-width: 1100px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 95%;
+}
+
+.slideshow-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;  width: auto;
+  position: absolute;
+  margin: auto;
+}
+
+.prev, .next {
+  	text-align: left;
+	cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+  color: #black;
+  font-size: 15px;
+  padding: 2px 2px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 500px) {
+  cable-holder {
+    width: 100%;
+  }
+}
+
+.email {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+  color: rgb(72, 145, 220);
+}
+
+.email:hover {
+  border-bottom: 1px solid rgb(72, 145, 220);
+}
+
+input {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 7px 15px;
+  font-size: 1em;
+  border-radius: 4px;
+  font-weight: 300;
+  margin: 10px 10px 10px 0;
+  outline: none;
+  max-width: 90%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+input:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+header {
+  background-image: url("/img/backs/biochemfull.jpg");
+  background-size: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.25);
+          box-shadow: 0 0 5px 2px rgba(0,0,0,0.25);
+}
+
+header>cable-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (max-width:2880px) and (max-height: 1920px) {
+  header {
+    background-image: url(/img/backs/biochem2880.jpg);
+  }
+}
+
+@media only screen and (max-width: 1920px) and (max-height: 1280px) {
+  header {
+    background-image: url(/img/backs/biochem1920.jpg);
+  }
+}
+
+@media only screen and (max-width:1440px) and (max-height: 960px) {
+  header {
+    background-image: url(/img/backs/biochem1440.jpg);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(-o-min-device-pixel-ratio: 5/4),
+(min-resolution: 120dpi) {
+  @media only screen and (max-width: 1440px) and (max-height: 960px) {
+    header {
+      background-image: url(/img/backs/biochem2880.jpg);
+    }
+  }
+  @media only screen and (max-width: 960px) and (max-height: 640px) {
+    header {
+      background-image: url(/img/backs/biochem1920.jpg);
+    }
+  }
+  @media only screen and (max-width:720px) and (max-height: 480px) {
+    header {
+      background-image: url(/img/backs/biochem1440.jpg);
+    }
+  }
+}
+
+logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 60vh;
+  position: relative;
+}
+
+logo-border {
+  position: absolute;
+  border: 1px solid white;
+  height: 32vh;
+  width: 32vh;
+  left: -5vh;
+}
+
+logo-strand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(80deg);
+            transform: rotateY(80deg);
+/*    transform: translateX(26px);*/
+/*    transform: scaleX(0.01);*/
+/*    opacity: 0;*/
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+/*    opacity: 1;*/
+/*    transform: translateX(0);*/
+/*    transform: scaleX(1);*/
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotateY(80deg);
+            transform: rotateY(80deg);
+/*    transform: translateX(26px);*/
+/*    transform: scaleX(0.01);*/
+/*    opacity: 0;*/
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+/*    opacity: 1;*/
+/*    transform: translateX(0);*/
+/*    transform: scaleX(1);*/
+  }
+}
+
+@-webkit-keyframes fadegrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadegrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+logo-strand>img {
+  height: 240px;
+  margin-left: -26px;
+  margin-right: 10px;
+/*  animation: spin 1s cubic-bezier(0.96, 0.19, 0.56, 0.7);*/
+  -webkit-animation: spin 1.5s ease;
+          animation: spin 1.5s ease;
+}
+
+logo-cable {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  border-left: 3px solid white;
+  min-height: 20px;
+}
+
+#biochemcredit {
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+logo-strand>h1 {
+  font-size: 4em;
+  margin-left: 5px;
+  margin-bottom: 25px;
+  -webkit-animation: fadegrow 1s ease;
+          animation: fadegrow 1s ease;
+}
+
+.fullheader events-box {
+  background: rgba(50, 0, 0, 0.6);
+  border-radius: 2px;
+  padding: 25px 30px 25px 40px;
+}
+
+events-box {
+  text-align: right;
+  font-size: 1.3em;
+  padding-right: 30px;
+  display: block;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  /*  padding-bottom: 50px;*/
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+events-box>h2 {
+  font-variant: small-caps;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid white;
+}
+
+events-box>h3 {
+  margin-bottom: 5px;
+}
+
+events-box>p {
+  font-variant: small-caps;
+  padding: 5px 0;
+  font-size: 1.1em;
+  text-align: right;
+}
+
+@media only screen and (max-width: 700px) {
+  header>cable-holder {
+    display: block;
+  }
+  events-box {
+    text-align: left;
+    border-left: 3px solid white;
+    padding: 20px 5px 20px 10px;
+    background: none !important;
+  }
+  logo-box {
+    display: inline-block;
+    min-height: 0;
+  }
+  logo-strand>h1 {
+    font-size: 3.5em;
+  }
+  .fullheader logo-box {
+    min-height: 0;
+  }
+  #biochemcredit {
+    border-left: 3px solid white;
+  }
+}
+
+main {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main>cable-holder {
+  border-left: 3px solid rgb(0, 33, 71);
+  padding: 50px 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+}
+
+#events,
+#committee {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+section {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+  padding: 15px 10px;
+  border-radius: 2px;
+  background-image: -webkit-linear-gradient(330deg, #fdfbfb 0%, #f1f3f3 100%);
+  background-image: -o-linear-gradient(330deg, #fdfbfb 0%, #f1f3f3 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f1f3f3 100%);
+  background-color: #fdfbfb;
+  /*  background-color: red;*/
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  -webkit-animation: fadegrow 1s ease-in-out;
+          animation: fadegrow 1s ease-in-out;
+}
+
+section:hover {
+  background-position: 1200px 0;
+}
+
+section>img {
+  height: 1.6em;
+  display: inline-block;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+section>a {
+  padding: 7px 20px;
+  margin: 15px 15px 5px 0;
+  font-size: 1em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-radius: 2px;
+  text-decoration: none;
+  display: inline-block;
+  background: rgba(74, 145, 220, 0.7);
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+section>a:hover {
+  background: white;
+  color: rgb(74, 145, 220);
+  border: 1px solid rgba(74, 145, 220, 0.5);
+}
+
+section>a:active {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+}
+
+#merckm>a>img {
+  opacity: 1;
+  position: absolute;
+  height: 1.8em;
+}
+
+#merckm {
+  bottom: 40px;
+  right: 80px;
+  position: absolute;
+}
+#oxfogrant>a>img {
+  opacity: 1;
+  position: absolute;
+  height: 1.8em;
+}
+
+#oxfogrant {
+  bottom: 40px;
+  right: 275px;
+  position: absolute;
+}
+
+section:nth-child(odd) {
+  border-top: 5px solid rgb(158, 206, 235);
+}
+
+section:nth-child(even) {
+  border-top: 5px solid rgb(0, 110, 112);
+}
+
+section>h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9em;
+  display: inline-block;
+  letter-spacing: 0.02em;
+  color: rgb(74, 145, 220);
+}
+
+section>p {
+  line-height: 1.35em;
+  clear: both;
+  margin: 5px 0;
+}
+
+section>p>a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+  color: rgb(72, 145, 220);
+}
+
+section>p>a:hover {
+  border-bottom: 1px solid rgb(72, 145, 220);
+}
+
+section ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+section li {
+  list-style-type: none;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+#events,
+#faqs{
+  background-image: -webkit-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: -o-linear-gradient(330deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-color: #a1c4fd;
+  border-top: none;
+}
+
+#events h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.posterpage #events h2 {
+  font-weight: 500;
+}
+
+#events li {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border-left: 5px solid rgba(255, 255, 255, 0.8);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+}
+
+#events li>a{
+  color: black;
+  text-decoration: none;
+  height: 100%;
+  display: block;
+}
+
+#events li>a:hover p {
+  text-decoration: underline;
+}
+
+#events h3 {
+	font-size: 1.2em;
+}
+
+.notconfirmed {
+  opacity: 0.3;
+  /*  display: none;*/
+}
+
+#events h4 {
+/*  font-size: 1em;*/
+  font-size: 1em;
+  padding: 6px 0;
+}
+
+#events h5 {
+  font-weight: 500;
+  font-size: 1.1em;
+ padding: 6px 0;
+
+}
+
+#events h6 {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+#events a:link {
+	color: blue;
+}
+
+#events a:visited {
+	color: purple;
+}
+
+#events a:hover {
+	color: lightblue;
+}
+
+@media only screen and (max-width: 700px) {
+  main>cable-holder {
+    padding: 70px 5px;
+    grid-gap: 4px;
+  }
+  section {
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px 2px 5px 5px;
+  }
+  #events>ul>li,
+  #committee>ul>li,
+  section {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+}
+
+#committee,
+#opportunities {
+  text-align: left;
+}
+
+#committee>h2 {
+  margin-bottom: 10px;
+}
+
+#committee>h3 {
+  font-size: 1em;
+}
+
+col-spacer {
+  display: block;
+  height: 10px;
+  clear: both;
+}
+
+#committee li img {
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 900px) {
+  #committee>ul {
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+  #committee li img {
+    width: 70px;
+  }
+}
+
+aside {
+  display: block;
+  background: rgb(120, 120, 130);
+}
+
+aside>cable-holder {
+  border-left: 3px solid rgb(0, 33, 71);
+  position: relative;
+}
+
+img-scroll {
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 0;
+  padding: 10px 40px 10px 20px;
+}
+
+fade-box {
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 50px;
+  top: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgb(120, 120, 130)));
+  background: -webkit-linear-gradient(left, transparent, rgb(120, 120, 130));
+  background: -o-linear-gradient(left, transparent, rgb(120, 120, 130));
+  background: linear-gradient(to right, transparent, rgb(120, 120, 130));
+  /*  border: 1px solid red;*/
+}
+
+aside img {
+  max-height: 350px;
+  display: inline-block;
+  margin: 0 -3px;
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, right top, from(#0f69af), color-stop(#0f69af), to(rgb(0, 33, 71)));
+  background: -webkit-linear-gradient(left, #0f69af, #0f69af, rgb(0, 33, 71));
+  background: -o-linear-gradient(left, #0f69af, #0f69af, rgb(0, 33, 71));
+  background: linear-gradient(to right, #0f69af, #0f69af, rgb(0, 33, 71));
+  color: #96d7d2;
+}
+
+footer>cable-holder {
+  border-left: 3px solid #96d7d2;
+  padding: 10px 20px;
+}
+
+footer .otherside {
+  float: right;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 800px) {
+  footer {
+    background: #0f69af;
+  }
+  footer .otherside {
+    display: none;
+  }
+}
