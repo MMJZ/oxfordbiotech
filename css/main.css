@@ -761,11 +761,6 @@ fade-box {
   /*  border: 1px solid red;*/
 }
 
-aside img {
-  max-height: 350px;
-  display: inline-block;
-  margin: 0 -3px;
-}
 
 footer {
   background: -webkit-gradient(linear, left top, right top, from(#0f69af), color-stop(#0f69af), to(rgb(0, 33, 71)));
