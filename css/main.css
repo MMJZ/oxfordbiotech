@@ -52,6 +52,15 @@ cable-holder {
   width: 95%;
 }
 
+.slider-holder {
+  text-align: center;
+}
+
+.slide-show {
+  display: inline-block;
+  position: relative;
+}
+
 .slideshow-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -61,28 +70,31 @@ cable-holder {
 }
 
 .prev, .next {
-  	text-align: left;
+  text-align: left;
 	cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 2px 9px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  transition: 0.2s ease;
+  border-radius: 100%;
   user-select: none;
+}
+
+.prev {
+  left: 0;
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.3);
 }
 
 .caption {
@@ -351,7 +363,7 @@ logo-cable {
 }
 
 logo-strand>h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   margin-left: 5px;
   margin-bottom: 25px;
   -webkit-animation: fadegrow 1s ease;
@@ -420,7 +432,7 @@ events-box>p {
   }
 }
 
-main {
+main, aside {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
@@ -440,10 +452,19 @@ main>cable-holder {
   padding: 50px 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  /*-ms-grid-columns: (1fr)[2]; */
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-gap: 20px;
+}
+
+aside>cable-holder {
+  border-left: 3px solid rgb(0, 33, 71);
+  padding: 10px 20px;
+}
+
+aside {
+  width: 100%;
 }
 
 #events,
@@ -727,11 +748,10 @@ col-spacer {
 }
 
 aside {
+  position: relative;
   display: block;
-  margin: auto;
+  margin: 0 auto;
 }
-
-
 
 img-scroll {
   display: block;
